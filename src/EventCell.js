@@ -59,10 +59,10 @@ class EventCell extends React.Component {
           })}
           onClick={(e) => onSelect(event, e)}
         >
-          <div className='rbc-event-content' title={title}>
+          <div className='rbc-event-content' title={title.tooltip || title}>
             { Event
               ? <Event event={event} title={title}/>
-              : title
+              : title.content || title
             }
           </div>
         </div>
